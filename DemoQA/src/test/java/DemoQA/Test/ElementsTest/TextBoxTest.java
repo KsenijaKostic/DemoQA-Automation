@@ -22,13 +22,11 @@ public class TextBoxTest extends BasePage {
             String email = excelReader.getStringData("Inputs", i, 1);
             String curentAddress = excelReader.getStringData("Inputs", i, 2);
             String permanentAddress = excelReader.getStringData("Inputs", i, 2);
-
             textBoxPage.inputFullName(name);
             textBoxPage.inputEmail(email);
             textBoxPage.inputCurrentAddress(curentAddress);
             textBoxPage.inputPermanentAddress(permanentAddress);
             textBoxPage.clickSubmit();
-
             Assert.assertTrue(textBoxPage.getMessage().isDisplayed());
         }
     }
@@ -42,7 +40,6 @@ public class TextBoxTest extends BasePage {
             String email = excelReader.getStringData("Inputs", i, 3);
             String curentAddress = excelReader.getStringData("Inputs", i, 2);
             String permanentAddress = excelReader.getStringData("Inputs", i, 2);
-
             textBoxPage.inputFullName(name);
             textBoxPage.inputEmail(email);
             textBoxPage.inputCurrentAddress(curentAddress);

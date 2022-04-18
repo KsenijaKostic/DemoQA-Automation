@@ -1,7 +1,6 @@
 package DemoQA.Test.ElementsTest;
 
 import DemoQA.BasePage.BasePage;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,20 +17,17 @@ public class BrokenLinksImagesTest extends BasePage {
 
     @Test
     public void VerifyThatThereIsValidImageOnThePage(){
-
         Assert.assertTrue(brokenLinksImagesPage.getValidImage().isDisplayed());
     }
 
     @Test
     public void verifyThatBrokenImageHaveBrokenImageSign(){
-
         Assert.assertTrue(brokenLinksImagesPage.getBrokenImage().isDisplayed());
     }
 
     @Test
     public void verifyThatUserWillBeRedirectedToNewPageWhenClicksOnValidLink(){
         brokenLinksImagesPage.clickOnValidLink();
-
         String actualLink = driver.getCurrentUrl();
         String expectedLink = excelReader.getStringData("URL", 0, 1);
         Assert.assertEquals(actualLink, expectedLink);
@@ -41,11 +37,8 @@ public class BrokenLinksImagesTest extends BasePage {
     @Test
     public void verifyThatUserWillBeRedirectedToBrokenPage(){
         brokenLinksImagesPage.clickOnBronekLink();
-
         String actualLink = driver.getCurrentUrl();
         String expectedLink = excelReader.getStringData("URL", 9, 2);
         Assert.assertEquals(actualLink, expectedLink);
-
     }
-
 }

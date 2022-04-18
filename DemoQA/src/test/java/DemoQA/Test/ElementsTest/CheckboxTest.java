@@ -22,20 +22,17 @@ public class CheckboxTest extends BasePage {
         checkBoxPage.clickOnArrow(4);
         checkBoxPage.clickOnArrow(5);
         checkBoxPage.clickOnArrow(6);
-
         Assert.assertEquals(checkBoxPage.openedArrow(1), excelReader.getStringData("Asserts", 0, 1));
         Assert.assertEquals(checkBoxPage.openedArrow(2), excelReader.getStringData("Asserts", 0, 1));
         Assert.assertEquals(checkBoxPage.openedArrow(3), excelReader.getStringData("Asserts", 0, 1));
         Assert.assertEquals(checkBoxPage.openedArrow(4), excelReader.getStringData("Asserts", 0, 1));
         Assert.assertEquals(checkBoxPage.openedArrow(5), excelReader.getStringData("Asserts", 0, 1));
         Assert.assertEquals(checkBoxPage.openedArrow(6), excelReader.getStringData("Asserts", 0, 1));
-
     }
 
     @Test
     public void verifyThatUserCanCheckHomeCheckBoxAndThatAllOtherCheckBoxesAreChecked(){
         checkBoxPage.clickOnHomeCheckbox();
-
         Assert.assertTrue(checkBoxPage.getResult().isDisplayed());
         Assert.assertEquals(checkBoxPage.textResult(), excelReader.getStringData("Messages", 1, 1));
     }
@@ -45,9 +42,7 @@ public class CheckboxTest extends BasePage {
         checkBoxPage.clickOnHomeCheckbox();
         checkBoxPage.clickOnArrow(1);
         checkBoxPage.clickOnDesktopCheckbox();
-
         Assert.assertTrue(checkBoxPage.getResult().isDisplayed());
         Assert.assertEquals(checkBoxPage.textResult(), excelReader.getStringData("Messages", 1, 2));
-
     }
 }
