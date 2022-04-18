@@ -1,8 +1,6 @@
 package DemoQA.Test.ElementsTest;
 
 import DemoQA.BasePage.BasePage;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

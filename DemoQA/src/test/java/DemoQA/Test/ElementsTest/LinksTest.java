@@ -112,7 +112,6 @@ public class LinksTest extends BasePage {
         String expectedMessage2 = excelReader.getStringData("Messages", 3, 5);
         Assert.assertEquals(actualMessage2, expectedMessage2);
 
-
         linksPage.clickForbiddenLink();
         Thread.sleep(500);
         String actualMessage3 = linksPage.respondMessage();
@@ -124,8 +123,5 @@ public class LinksTest extends BasePage {
         String actualMessage4 = linksPage.respondMessage();
         String expectedMessage4 = excelReader.getStringData("Messages", 3, 7);
         Assert.assertEquals(actualMessage4, expectedMessage4);
-
     }
-
-
 }

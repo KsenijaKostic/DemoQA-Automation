@@ -7,19 +7,16 @@ import org.testng.annotations.Test;
 
 public class TextBoxTest extends BasePage {
 
-
     @BeforeMethod
     public void pageSetUp() {
         driver.manage().window().maximize();
         driver.navigate().to(homeURL);
-
     }
 
     @Test
     public void VerifyThatMessageAppearsWhenValidParametersInAllTextBoxesAreInputedWhenSubmited() {
         homePage.clickElements();
         elementsSideBar.clickOnTextBox();
-        //textBoxPage.inputFullName(excelReader.getStringData("Inputs", 1, 0));
         for (int i = 1; i <= excelReader.getLastRow("Inputs"); i++) {
             String name = excelReader.getStringData("Inputs", i, 0);
             String email = excelReader.getStringData("Inputs", i, 1);
@@ -33,7 +30,6 @@ public class TextBoxTest extends BasePage {
             textBoxPage.clickSubmit();
 
             Assert.assertTrue(textBoxPage.getMessage().isDisplayed());
-
         }
     }
 
@@ -56,8 +52,4 @@ public class TextBoxTest extends BasePage {
             Assert.assertTrue(textBoxPage.getErrorForm().isEnabled());
         }
     }
-
-
-
-
 }

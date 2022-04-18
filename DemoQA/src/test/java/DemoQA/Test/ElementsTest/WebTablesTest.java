@@ -15,7 +15,7 @@ public class WebTablesTest extends BasePage {
         Thread.sleep(1000);
         elementsSideBar.clickOnWebTables();
     }
-//        logInPage.inputPassword(String.valueOf(excelReader.getIntegerData("Inputs", 1, 1)));
+
     @Test
     public void VerifyThatUserCanAddNewPersonToTheWeblist(){
 
