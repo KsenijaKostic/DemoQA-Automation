@@ -42,7 +42,6 @@ public class BrokenLinksImagesPage {
         return driver.findElement(By.linkText("Click Here for Broken Link"));
     }
 
-
     //-----------------------------------------
     public void scroll(WebElement element) {
         ((JavascriptExecutor) this.driver).executeScript("arguments[0].scrollIntoView(true);", element);
@@ -58,10 +57,7 @@ public class BrokenLinksImagesPage {
     }
 
     public void clickOnBronekLink(){
-
         scroll(getBrokenLink());
         getBrokenLink().click();
     }
-
-
 }

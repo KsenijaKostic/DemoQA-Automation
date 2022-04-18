@@ -104,6 +104,4 @@ public class ElementsSideBar {
     public void scroll(WebElement element) {
         ((JavascriptExecutor) this.driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
-
-
 }

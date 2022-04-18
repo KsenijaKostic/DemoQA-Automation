@@ -76,7 +76,4 @@ public class TextBoxPage {
         scroll(getSubmitButton());
         getSubmitButton().click();
     }
-
-
-
 }

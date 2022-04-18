@@ -4,15 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.pagefactory.ByAll;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
 public class CheckBoxPage {
 
     public WebDriver driver;
-
     List<WebElement> uncheckedCheckboxes;
     List<WebElement> checkedCheckboxes;
     WebElement homeCB;
@@ -59,24 +56,24 @@ public class CheckBoxPage {
     }
 
     public void clickOnArrow(int i) {
-        scroll(getArrow().get(i-1));
+        scroll(getArrow().get(i - 1));
         getArrow().get(i - 1).click();
     }
 
-    public String openedArrow(int i){
-        scroll(getOpenArrow().get(i-1));
-        return getOpenArrow().get(i-1).getAttribute("class");
+    public String openedArrow(int i) {
+        scroll(getOpenArrow().get(i - 1));
+        return getOpenArrow().get(i - 1).getAttribute("class");
     }
 
-    public void clickOnHomeCheckbox(){
+    public void clickOnHomeCheckbox() {
         getHomeCB().click();
     }
 
-    public void clickOnDesktopCheckbox(){
+    public void clickOnDesktopCheckbox() {
         getDesktopCB().click();
     }
 
-    public String textResult(){
+    public String textResult() {
         return getResult().getText();
     }
 }

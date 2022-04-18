@@ -16,7 +16,6 @@ public class RadioButtonPage {
         this.driver = driver;
     }
 
-
     public WebElement getYessRB() {
         return driver.findElement(By.cssSelector("#app > div > div > div.row > div.col-12.mt-4.col-md-6 > div:nth-child(1) > div:nth-child(2) > label")); //div.custom-control:nth-child(2) > label:nth-child(2)
     }

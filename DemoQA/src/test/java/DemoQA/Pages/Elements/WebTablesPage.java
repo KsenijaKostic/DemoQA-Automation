@@ -156,6 +156,4 @@ public class WebTablesPage {
 
         return brojac - 1;
     }
-
-
 }
