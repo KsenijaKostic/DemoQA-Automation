@@ -4,10 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-
-import java.util.List;
 
 import static org.openqa.selenium.Keys.ENTER;
 
@@ -62,12 +58,7 @@ public class PracticeFormsPage {
     public WebElement getOtherGender() {
         return driver.findElement(By.cssSelector("#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label"));
     }
-
-
 //calendar
-
-
-
     public WebElement getSubject() {
         return driver.findElement(By.cssSelector("#subjectsContainer"));
     }
@@ -103,7 +94,6 @@ public class PracticeFormsPage {
     public WebElement getSubmitButton() {
         return driver.findElement(By.id("submit"));
     }
-
 
     //---------------------------------------------------
 
@@ -142,11 +132,7 @@ public class PracticeFormsPage {
         getMobileNumber().clear();
         getMobileNumber().sendKeys(number);
     }
-
-
     //calendar
-
-
     public void inputSubject(String subject){
         getSubject().click();
         getSubject().sendKeys(subject);
@@ -177,23 +163,14 @@ public class PracticeFormsPage {
     }
 
     public void chooseState() throws InterruptedException {
-        //State i City sam probala na 20 nacina da uradim. select nece da radi jer ne postoji tag koji kaze da je to padajuca lista/meni
-        //Pokusacu ovo da resim dok radim projekat na dalje. probala sam i sa petljom da prodjem kroz listu, medjutim on listu uopste ne vidi.
-        //promenila sam i 10ak lokatora, ali i sa promenom se isto desava.
         scroll(getState());
-        //getState().click();
-       // getState().clear();
-       // getState().sendKeys(stat);
         getState().click();
         Thread.sleep(1000);
-
         getState().sendKeys(ENTER);
     }
 
     public void chooseCity() throws InterruptedException {
         scroll(getCity());
-        //Select city = new Select(getCity());
-        //city.selectByValue(citi);
         getCity().click();
         Thread.sleep(1000);
         getCity().sendKeys(ENTER);

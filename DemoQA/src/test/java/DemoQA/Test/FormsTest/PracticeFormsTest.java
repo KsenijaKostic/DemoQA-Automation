@@ -10,8 +10,6 @@ public class PracticeFormsTest extends BasePage {
     public void pageSetUp() {
         driver.manage().window().maximize();
         driver.navigate().to(excelReader.getStringData("URL", 13, 1));
-        /*homePage.clickForms();  //pokusala sam preko lokatora, i izmenjala 10ak razlicitih i ni jedan od njih nece da radi da bi kliknuo
-        formsSideBar.clickPracticeForms();*/
     }
 
     @Test
@@ -24,7 +22,6 @@ public class PracticeFormsTest extends BasePage {
         String validPic = excelReader.getStringData("Upload", 0, 1);
         String validAddress = excelReader.getStringData("Inputs", 1, 2);
         String validState = excelReader.getStringData("Registration", 1, 10);
-
         practiceFormsPage.inputFirstName(validName);
         practiceFormsPage.inputLastName(validLastName);
         practiceFormsPage.inputEmail(validEmail);
